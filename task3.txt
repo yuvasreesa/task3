@@ -1,0 +1,59 @@
+SELECT * FROM books;
+
+
+SELECT title, author FROM books;
+
+
+SELECT * FROM books
+WHERE author IS NOT NULL;
+
+
+SELECT * FROM members
+WHERE name LIKE 'J%';
+
+
+SELECT * FROM loans
+WHERE loan_date BETWEEN '2024-06-01' AND '2024-06-15';
+
+
+SELECT * FROM members
+WHERE email IS NULL;
+
+
+SELECT * FROM books
+ORDER BY title ASC;
+
+
+SELECT * FROM members
+ORDER BY name DESC;
+
+
+SELECT * FROM books
+LIMIT 3;
+
+
+SELECT title AS 'Book Title', author AS 'Written By'
+FROM books;
+
+
+SELECT b.title, c.category_name
+FROM books b
+JOIN categories c ON b.category_id = c.category_id
+WHERE c.category_name = 'Fiction';
+
+
+SELECT DISTINCT author FROM books;
+
+
+SELECT * FROM loans
+WHERE due_date IS NULL;
+
+
+SELECT b.title, c.category_name
+FROM books b
+JOIN categories c ON b.category_id = c.category_id
+WHERE c.category_name IN ('Science', 'Technology');
+
+
+SELECT * FROM members
+WHERE phone BETWEEN '9000000000' AND '9999999999';
